@@ -22,10 +22,19 @@
 
         <activity
             android:name=".AddReminderActivity"
-            android:exported="false" />
+            android:exported="false">
+
+        </activity>
+
+
         <activity
             android:name=".ReminderActivity"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
     </application>
 

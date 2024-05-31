@@ -42,7 +42,7 @@ public class AddReminderActivity extends AppCompatActivity {
 
         // Create an Intent to start the AlarmReceiver
         Intent alarmIntent = new Intent(this, AlarmReceiver.class);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, alarmIntent, 0);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, alarmIntent,PendingIntent.FLAG_MUTABLE);
 
         // Set the alarm to trigger at the specified time
         long currentTimeMillis = System.currentTimeMillis();
